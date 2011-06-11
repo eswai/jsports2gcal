@@ -1,13 +1,14 @@
 JSPORTSの放送予定をGoogle Calendarに書きこむRubyスクリプトです。
 Google accountが必要です。
 
-まず設定ファイルを準備してください。
+まず設定ファイルを準備してください。YAML形式です。
+feedには書き込みたいGoogle Calendarのfeed(privateでfull)を指定してください。
 uriにはJSPORTSのサイトの番組検索のURLを指定してください。
 ------------------------------------------------------
 Account: your_name@gmail.com
 Password: your_password
 Programs:
-  Cycle Road Race:
+  Cycle Road Race: # 
     feed: http://www.google.com/calendar/feeds/something/private/full
     uri: http://www.jsports.co.jp/search/sys/kensaku.cgi?Genre2=12
   Super GT:
@@ -18,5 +19,6 @@ Programs:
     uri: http://www.jsports.co.jp/search/sys/kensaku.cgi?Genre2=0601
 ------------------------------------------------------
 
+実行する
 ruby1.9 jsports2gcal.rb sample.yaml
 
